@@ -213,9 +213,9 @@ code.language-yaml {
     <body for="html-export">
       <div class="mume markdown-preview   ">
       <style>.markdown-preview.markdown-preview {
-  font-size: 15px;
-  font-family: "Microsoft Yahei", "SimSun", Arial;
-  background-color: #282c34;
+  font-size: 1em;
+  font-family: "Courier New", "STXihei", "Microsoft Yahei";
+  background-color: #23272e;
   color: #abb2bf;
 }
 .markdown-preview.markdown-preview h1,
@@ -224,12 +224,13 @@ code.language-yaml {
 .markdown-preview.markdown-preview h4,
 .markdown-preview.markdown-preview h5,
 .markdown-preview.markdown-preview h6 {
-  font-family: "Times", "Microsoft Yahei", "SimSun", Arial;
-  color: #cb8c4d;
+  font-family: "Centaur", "Times", "Source Han Serif CN", "STZhongsong", Serif;
+  color: #daa377;
   text-transform: capitalize;
 }
 .markdown-preview.markdown-preview h1 {
   font-size: 2em;
+  color: #cb8c4d;
 }
 .markdown-preview.markdown-preview h2 {
   font-size: 1.4em;
@@ -243,17 +244,16 @@ code.language-yaml {
 .markdown-preview.markdown-preview h4,
 .markdown-preview.markdown-preview h5,
 .markdown-preview.markdown-preview h6 {
-  font-size: 1em;
-  color: #d19a66;
+  font-size: 1.05em;
+  color: #daa377;
   margin-bottom: 0.25em;
 }
 .markdown-preview.markdown-preview a {
   color: #89abcd;
 }
 .markdown-preview.markdown-preview strong {
-  font-family: "Microsoft Yahei", "SimSun", Arial;
-  font-weight: normal;
-  color: #e9c490;
+  font-family: "Courier New", "STXihei", "Microsoft Yahei";
+  color: #dec196;
 }
 .markdown-preview.markdown-preview p {
   text-indent: 0em;
@@ -269,9 +269,10 @@ code.language-yaml {
 }
 .markdown-preview.markdown-preview ul ul,
 .markdown-preview.markdown-preview ol {
-  border-left: none;
-  list-style-type: circle;
   padding-bottom: 0.5em;
+}
+.markdown-preview.markdown-preview ul ul {
+  list-style-type: circle;
 }
 .markdown-preview.markdown-preview pre {
   overflow: auto;
@@ -280,7 +281,7 @@ code.language-yaml {
   padding: 1em;
   margin: 0;
   color: #abb2bf;
-  background-color: #1d2025;
+  background-color: #181b20;
 }
 .markdown-preview.markdown-preview pre > code {
   display: block;
@@ -290,43 +291,95 @@ code.language-yaml {
   text-shadow: none;
   font-size: 0.85em !important;
   color: #abb2bf;
-  background-color: #1d2025;
+  background-color: #181b20;
   border-radius: 3px;
   padding: 0.1em .5em;
 }
 </style>
 <div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="btn-group"><div class="run-btn btn"><span>▶︎</span></div><div class="run-all-btn btn">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
-<li><a href="#%E7%8E%A9%E6%B3%95">玩法</a></li>
-<li><a href="#%E4%BA%BA%E7%89%A9%E8%A7%92%E8%89%B2">人物角色</a></li>
-<li><a href="#%E7%89%A9%E5%93%81">物品</a></li>
-<li><a href="#%E6%95%B0%E5%80%BC">数值</a></li>
+<li><a href="#%E7%8E%A9%E6%B3%95">玩法</a>
+<ul>
+<li><a href="#%E6%A0%B8%E5%BF%83">核心</a></li>
+<li><a href="#%E6%B8%B8%E6%88%8F%E8%BF%9B%E7%A8%8B">游戏进程</a></li>
+<li><a href="#%E5%9C%BA%E6%99%AF">场景</a></li>
+<li><a href="#%E6%8E%A2%E9%99%A9">探险</a></li>
 </ul>
-<hr>
-<h2>toc:<br>
-depth_from: 1<br>
-depth_to: 2<br>
-ordered: false</h2>
+</li>
+<li><a href="#%E4%BA%BA%E7%89%A9%E8%A7%92%E8%89%B2">人物角色</a>
+<ul>
+<li><a href="#%E6%A6%82%E5%BF%B5">概念</a></li>
+<li><a href="#%E7%A7%8D%E6%97%8F">种族</a></li>
+<li><a href="#%E5%A4%A9%E8%B5%8B">天赋</a></li>
+<li><a href="#%E6%8A%80%E8%83%BD">技能</a></li>
+<li><a href="#%E8%81%8C%E4%B8%9A">职业</a></li>
+<li><a href="#build">Build</a></li>
+</ul>
+</li>
+<li><a href="#%E7%89%A9%E5%93%81">物品</a>
+<ul>
+<li><a href="#%E8%A3%85%E5%A4%87">装备</a></li>
+<li><a href="#%E8%A3%85%E5%A4%87%E5%88%B6%E9%80%A0">装备制造</a></li>
+<li><a href="#%E8%8D%AF%E6%B0%B4">药水</a></li>
+</ul>
+</li>
+<li><a href="#%E6%95%B0%E5%80%BC">数值</a>
+<ul>
+<li><a href="#%E9%81%BF%E5%85%8D%E6%95%B0%E5%80%BC%E8%86%A8%E8%83%80">避免数值膨胀</a></li>
+<li><a href="#%E4%BC%A4%E5%AE%B3%E4%B8%8E%E9%98%B2%E5%BE%A1">伤害与防御</a></li>
+<li><a href="#%E7%BB%8F%E6%B5%8E">经济</a></li>
+</ul>
+</li>
+<li><a href="#testing-text">Testing Text</a>
+<ul>
+<li><a href="#core">CORE</a></li>
+</ul>
+</li>
+</ul>
 <h1 class="mume-header" id="%E7%8E%A9%E6%B3%95">玩法</h1>
 
 <h2 class="mume-header" id="%E6%A0%B8%E5%BF%83">核心</h2>
 
 <p>核心玩法：“组队刷地下城，提升人物等级和装备”。所有的游戏要素都要围绕核心构建。<br>
-特色：游戏以“局”划分。每次地下城 <strong>副本</strong> 都是一局游戏，时间长度可控（20-30min），有明确的节奏（如开局，过程，最终BOSS）。<br>
-关键词：回合制，暗黑</p>
-<p><strong>目标</strong></p>
+关键词：回合制，装备驱动<br>
+启发：暗黑破坏神2，极黑地牢，流放之路</p>
+<h3 class="mume-header" id="%E4%B8%BB%E8%A6%81%E6%A6%82%E5%BF%B5">主要概念</h3>
+
 <ul>
-<li>具备长时间，反复玩。</li>
-<li>游戏过程具有策略性和持续刺激机制。</li>
-<li>传递的情感：旅人 孤独感</li>
+<li>人物：主角 + 雇佣兵</li>
+<li>场景：城镇 + 地下城。出城即副本。</li>
+<li>冒险：
+<ul>
+<li>游戏以“局”划分。每次地下城 <strong>副本</strong> 都是一局游戏，时间长度可控（20-30min）。</li>
+<li>地下城：随机生成，关卡式（节奏明确，如开局，过程，最终BOSS）。</li>
+<li>战斗：回合制</li>
 </ul>
+</li>
+<li>升级：杀怪无经验，完成副本才有经验和奖励。</li>
+<li>装备制作：底材 + 魔法材料</li>
+</ul>
+<h3 class="mume-header" id="%E6%B8%B8%E6%88%8F%E5%BE%AA%E7%8E%AF">游戏循环</h3>
+
 <p><img src="BasicFlow.png" alt="&#x6E38;&#x620F;&#x5FAA;&#x73AF;&#x793A;&#x610F;&#x56FE;"></p>
-<h3 class="mume-header" id="%E5%88%B7%E8%A3%85%E5%A4%87">刷装备</h3>
+<ol>
+<li>选择佣兵 -&gt; 组建队伍</li>
+<li>接任务，下副本</li>
+<li>副本奖励：
+<ul>
+<li>经验 -&gt; 人物升级 | 佣兵升级</li>
+<li>材料 -&gt; 装备制作 | 技能强化</li>
+</ul>
+</li>
+<li>佣兵能力到达上限 -&gt; 更换佣兵</li>
+<li>重复</li>
+</ol>
+<h3 class="mume-header" id="%E8%A3%85%E5%A4%87%E9%A9%B1%E5%8A%A8">装备驱动</h3>
 
 <p><strong>刷(Loot)</strong> 是指重复一件事情的过程，刷的过程应该有趣(Fun)并伴随着快感(Pleasure)。</p>
-<p><strong>快感</strong><br>
-问题：如何达成持续性奖励？</p>
+<h4 class="mume-header" id="%E5%BF%AB%E6%84%9F">快感</h4>
+
+<p>问题：如何达成持续性奖励？</p>
 <ul>
-<li>传统RPG人物（后期）提升缓慢。刷子游戏通过掉落好装备给予短时间快感，但通常多数时候都是掉落垃圾。</li>
+<li>传统RPG人物后期提升缓慢。刷子游戏通过掉落好装备给予短时间快感，但通常多数时候都是掉落垃圾。</li>
 <li>学习对抗类游戏
 <ul>
 <li>对抗类游戏的持续快感，节奏快，不到30分钟一局，一局接一局的持续快感。</li>
@@ -335,81 +388,121 @@ ordered: false</h2>
 </ul>
 </li>
 </ul>
-<p><strong>趣味性</strong></p>
+<h4 class="mume-header" id="%E8%B6%A3%E5%91%B3%E6%80%A7">趣味性</h4>
+
 <ul>
 <li>地下城策略</li>
 <li>战斗策略</li>
 <li>人物Build</li>
 <li>剧情背景</li>
 </ul>
+<h2 class="mume-header" id="%E6%B8%B8%E6%88%8F%E8%BF%9B%E7%A8%8B">游戏进程</h2>
+
+<h3 class="mume-header" id="%E5%89%A7%E6%83%85">剧情</h3>
+
+<h3 class="mume-header" id="%E4%BB%BB%E5%8A%A1">任务</h3>
+
+<ul>
+<li>获取：自动获取？</li>
+<li>获取：城镇或地下城都可以取得任务</li>
+</ul>
+<h3 class="mume-header" id="%E5%85%B6%E4%BB%96">其他</h3>
+
 <p><strong>如果要开发多人内容？</strong>（按实现难易度排列）</p>
 <ul>
 <li>PK</li>
 <li>经济联系 (POE)</li>
 <li>组队模式，意义？主角和佣兵不同？</li>
 </ul>
-<h2 class="mume-header" id="%E4%BB%BB%E5%8A%A1">任务</h2>
-
-<ul>
-<li>获取：自动获取？</li>
-<li>获取：城镇或地下城都可以取得任务</li>
-</ul>
 <p>END GAME<br>
 完成主线任务后 低级FB升级</p>
-<h2 class="mume-header" id="%E4%B8%96%E7%95%8C">世界</h2>
+<h2 class="mume-header" id="%E5%9C%BA%E6%99%AF">场景</h2>
 
-<p>世界包含数个地区，每地区由一个城镇和数个地下城组成。一个地区的地下城会随着剧情逐渐解锁，完成该地区的剧情任务后，解锁下一个地区。</p>
+<p>世界包含数个地区，每地区由一个城镇和数个地下城（副本）组成。一个地区的地下城会随着剧情逐渐解锁，完成该地区的剧情任务后，解锁下一个地区。</p>
+<p>例：</p>
+<ul>
+<li>暴风城（城镇）
+<ul>
+<li>艾尔文森林（地下城）</li>
+<li>西部荒野（地下城）</li>
+<li>赤脊山（地下城）</li>
+</ul>
+</li>
+</ul>
 <p>多个地区的意义？</p>
 <ul>
 <li>组织剧情，</li>
 <li>世界跨度，允许不同主题的场景</li>
-<li>收费方式？</li>
-<li>剧情节奏控制。完成地区时间：</li>
+<li>剧情进度控制。完成地区时间：X？</li>
 </ul>
 <h3 class="mume-header" id="%E5%9F%8E%E9%95%87">城镇</h3>
 
 <ul>
-<li>建筑
+<li>功能性NPC
 <ul>
-<li>酒馆
-<ul>
-<li>招募</li>
+<li>人员招募</li>
 <li>情报</li>
+<li>交易</li>
+<li>物品制作</li>
 </ul>
 </li>
-<li>工坊：制造</li>
-</ul>
-</li>
-<li>NPC
+<li>非功能性NPC
 <ul>
-<li>对话：给予一些故事背景</li>
+<li>背景故事</li>
 </ul>
 </li>
-<li>雇佣兵：
+<li>雇佣兵
 <ul>
 <li>队伍中，最大人数4</li>
-<li>不在队伍中的，最大人数4</li>
+<li>不在队伍中的，最大人数X？</li>
 </ul>
 </li>
 </ul>
 <h3 class="mume-header" id="%E5%9C%B0%E4%B8%8B%E5%9F%8E">地下城</h3>
 
 <ul>
-<li>主线</li>
-<li>支线</li>
-<li>end game</li>
+<li><strong>副本</strong>：每隔一段时间，区域都会生成数个副本，其内容、难度与奖励均随机生成。玩家需根据自己的实力和需求挑选合适的副本。</li>
+<li><strong>难度</strong>：完成地下城的过程中，会逐渐 <strong>解锁</strong> 更高难度的内容。难度越高，相应的奖励也越好。（奖励系数，奖励内容）
+<ul>
+<li>新兵：较易完成的内容。</li>
+<li>精英：包含BOSS战。</li>
+<li>英雄：几率出现。</li>
 </ul>
-<h2 class="mume-header" id="%E5%86%92%E9%99%A9">冒险</h2>
+</li>
+<li><strong>等级</strong>：怪物动态等级，随玩家等级变化，提高 <em>重用性</em>。</li>
+<li><strong>奖励</strong>：金币，材料，经验。
+<ul>
+<li>一般性奖励：即使不能完成地下城，途中也可以获得的奖励，用于维持开销，如金币。</li>
+<li>完成奖励：必须完成地下城才能获得的奖励，如经验。</li>
+<li>材料：材料的产出具有区域限定性或产量区别，避免只刷一区域的现象。</li>
+</ul>
+</li>
+<li>信息提示：在选择地下城的时候，显示其难度与奖励信息。
+<ul>
+<li>“根据侦查，XX的守备力量出现了松懈，现在是瓦解他们的最好时机！”</li>
+<li>BOSS战提示：“XXX大领主将会亲临现场”</li>
+<li>英雄提示：“旷日持久的战斗唤醒了一只沉睡的恶魔”</li>
+</ul>
+</li>
+<li>随机，节点，阴影</li>
+</ul>
+<h2 class="mume-header" id="%E6%8E%A2%E9%99%A9">探险</h2>
 
+<h3 class="mume-header" id="%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%80%83">设计思考</h3>
+
+<p>Q: 游戏的挑战是什么?<br>
+A: 变数<br>
+每一局游戏有什么不同，有哪些变量<br>
+PUBG 地图，出生地，物品，<br>
+Dota 英雄组，玩家<br>
+炉石 卡组 英雄 手牌</p>
 <h3 class="mume-header" id="%E9%98%9F%E4%BC%8D">队伍</h3>
 
-<p>4人，主角 + 佣兵 x 3</p>
-<h3 class="mume-header" id="%E5%9C%B0%E4%B8%8B%E5%9F%8E-1">地下城</h3>
+<p>人员: 4人，主角 + 佣兵 x 3</p>
+<h3 class="mume-header" id="%E6%8E%A2%E7%B4%A2">探索</h3>
 
 <ul>
-<li>随机，节点</li>
-<li>战争阴影</li>
-<li>节点</li>
+<li>目标</li>
 <li>事件
 <ul>
 <li>埋伏：路径上下一格出现怪物，之前道路出现怪</li>
@@ -418,28 +511,23 @@ ordered: false</h2>
 </ul>
 <h3 class="mume-header" id="%E6%88%98%E6%96%97">战斗</h3>
 
-<p>战斗流程</p>
+<p>战斗时间期望：3min</p>
+<h4 class="mume-header" id="%E6%88%98%E6%96%97%E6%B5%81%E7%A8%8B">战斗流程</h4>
+
 <ul>
 <li>回合制：轮流选择一个未行动单位进行操作，双方所有人物行动完成后重新开始下一轮。人物的先后顺序自由。</li>
 <li>战斗开始：双方选择地形</li>
-<li>指令： 攻击/防御/道具/撤退</li>
+<li>指令：攻击/防御/道具/撤退</li>
 <li>偷袭/埋伏：第一轮偷袭方全部行动完成后才轮到对方。</li>
 </ul>
-<p>死亡：</p>
+<h4 class="mume-header" id="%E6%AD%BB%E4%BA%A1">死亡</h4>
+
 <ul>
 <li>佣兵永久死亡</li>
 <li>主角不会死亡，主角在战斗中负伤，队伍会陷入大乱，战斗自动进行。战斗结果：胜利，失败，撤退。“你感觉情况不妙,要撤退吗?”</li>
 </ul>
-<p>节奏：</p>
-<ul>
-<li>战斗时间期望：3min</li>
-</ul>
-<p>怪物</p>
-<ul>
-<li>多AOE技能，平均化伤害</li>
-<li>？怪物组：提高怪物数量，形成怪物组？3怪为1组</li>
-<li>怪物Mods：蓝/金/暗金</li>
-</ul>
+<h4 class="mume-header" id="%E5%85%B6%E4%BB%96%E5%8F%82%E8%80%83%E8%AE%BE%E8%AE%A1">其他参考设计</h4>
+
 <p>环境</p>
 <ul>
 <li>环境提供掩体，可以避免被“集火”。</li>
@@ -456,24 +544,20 @@ ordered: false</h2>
 <p>表现形式<br>
 无场地<br>
 //六角形战斗场地：战争阴影</p>
-<h3 class="mume-header" id="q-a">Q &amp; A</h3>
+<h3 class="mume-header" id="%E6%95%8C%E4%BA%BA">敌人</h3>
 
-<p>Q: 游戏的挑战是什么?<br>
-A: 变数<br>
-每一局游戏有什么不同，有哪些变量<br>
-PUBG 地图，出生地，物品，<br>
-Dota 英雄组，玩家<br>
-炉石 卡组 英雄 手牌</p>
+<ul>
+<li>多AOE技能，平均化伤害</li>
+<li>？怪物组：提高怪物数量，形成怪物组？3怪为1组</li>
+<li>怪物Mods：蓝/金/暗金</li>
+</ul>
 <h1 class="mume-header" id="%E4%BA%BA%E7%89%A9%E8%A7%92%E8%89%B2">人物角色</h1>
 
-<p><strong>目标</strong><br>
-人物差异性</p>
-<ul>
-<li>随机天赋属性</li>
-</ul>
-<p>人物 = 种族 + 天赋 + 职业 + 冒险技能<br>
+<h2 class="mume-header" id="%E6%A6%82%E5%BF%B5">概念</h2>
+
+<p>人物 = 种族 + 天赋 + 职业 + 探险技能<br>
 Build = 人物 + 装备</p>
-<p>职业 &gt; 天赋 &gt; 冒险技能 &gt; 种族</p>
+<p><strong>要素强度</strong> 职业 &gt; 天赋 &gt; 探险技能 &gt; 种族</p>
 <h2 class="mume-header" id="%E7%A7%8D%E6%97%8F">种族</h2>
 
 <p>可以雇佣的种族3个，分别为人类，猪人，蜥蜴人。<br>
@@ -516,14 +600,13 @@ Build = 人物 + 装备</p>
 </ul>
 <h2 class="mume-header" id="%E5%A4%A9%E8%B5%8B">天赋</h2>
 
-<p>天赋体现人物差异性。<br>
-属性</p>
+<p>属性</p>
 <ul>
 <li>力</li>
 <li>敏</li>
 <li>智</li>
 </ul>
-<p>提升</p>
+<p>随机天赋属性，体现人物差异性。</p>
 <ul>
 <li>随机生成成长率 + 一定自由分配点？</li>
 <li>种族影响成长率</li>
@@ -531,7 +614,7 @@ Build = 人物 + 装备</p>
 <h2 class="mume-header" id="%E6%8A%80%E8%83%BD">技能</h2>
 
 <ul>
-<li>技能类型：战斗 | 冒险</li>
+<li>技能类型：战斗 | 探险</li>
 <li>获得</li>
 </ul>
 <h3 class="mume-header" id="%E6%88%98%E6%96%97%E6%8A%80%E8%83%BD">战斗技能</h3>
@@ -551,10 +634,11 @@ Build = 人物 + 装备</p>
 </ul>
 <h2 class="mume-header" id="%E8%81%8C%E4%B8%9A">职业</h2>
 
-<p>职业 = 技能组</p>
+<p>职业 = 技能组 [Link: 关于职业与技能]</p>
 <h3 class="mume-header" id="%E5%BD%A2%E8%B1%A1">形象</h3>
 
-<p>圣堂武士<br>
+<p><strong>（以下为POE职业系统分析）</strong><br>
+圣堂武士<br>
 智 圣骑士 盾 光环 锤<br>
 力智 （形象：死亡骑士）<br>
 力 （形象：混沌骑士）</p>
@@ -582,7 +666,7 @@ Build = 人物 + 装备</p>
 智敏<br>
 智<br>
 力智 元素</p>
-<h3 class="mume-header" id="build">Build</h3>
+<h2 class="mume-header" id="build">Build</h2>
 
 <p>任何Build都不应该依赖某件（套）独特的装备，否则就会违背刷装备不断提升的核心玩法。<br>
 Build必须是基于基本物品类型的，基于基本物品的好处是，可以融入“随机属性”的框架，进而加强核心玩法。</p>
@@ -595,21 +679,21 @@ Build必须是基于基本物品类型的，基于基本物品的好处是，可
 <h2 class="mume-header" id="%E8%A3%85%E5%A4%87">装备</h2>
 
 <p>种类: 武器 防具 饰品 其他</p>
-<h3 class="mume-header" id="%E8%A3%85%E5%A4%87%E4%BD%8D">装备位</h3>
+<h3 class="mume-header" id="%E8%A3%85%E5%A4%87%E6%A7%BD">装备槽</h3>
 
-<p>类DOTA装备位，简单快捷。</p>
+<h4 class="mume-header" id="%E8%AE%BE%E8%AE%A1%E8%A6%81%E7%82%B9">设计要点</h4>
+
 <ul>
-<li><strong>方案1 （8）</strong>
-<ul>
-<li>手1，手2，戒指，项链；头，胸，手，鞋子。共8个，2排每排4个。</li>
-<li>防具命中率：（头 20， 躯干 45， 手臂 20， 脚 15）</li>
+<li>养成难度：人物数量 * 槽数</li>
+<li>平衡：攻防部件数量</li>
+<li>操作性：简单快捷。（ex. 类DOTA装备槽）</li>
 </ul>
-</li>
-<li><strong>方案2 （4）</strong>
+<h4 class="mume-header" id="%E6%96%B9%E6%A1%88">方案</h4>
+
 <ul>
-<li>手1，手2，护具，饰品；背包</li>
-</ul>
-</li>
+<li>(4) 手1，手2，戒指，项链；</li>
+<li>(4) 头，胸，手，鞋子。</li>
+<li>防具命中率：提高每个防御部件的重要性。头(20)，躯干(45)，手臂(20)，脚(15)。</li>
 </ul>
 <h3 class="mume-header" id="%E5%B1%9E%E6%80%A7">属性</h3>
 
@@ -635,7 +719,7 @@ Build必须是基于基本物品类型的，基于基本物品的好处是，可
 
 <p>套装奖励随机</p>
 <p><strong>避免套装陷阱</strong><br>
-&quot;毁面者&quot;违背了“刷装备”的原则，出现了类似套装的现象。该build 至少将手套、武器、头盔 三个装备栏限定。</p>
+“毁面者”违背了“刷装备”的原则，出现了类似套装的现象。该build 至少将手套、武器、头盔 三个装备栏限定。</p>
 <h2 class="mume-header" id="%E8%A3%85%E5%A4%87%E5%88%B6%E9%80%A0">装备制造</h2>
 
 <p>装备都是通过制造获得</p>
@@ -676,19 +760,14 @@ Build必须是基于基本物品类型的，基于基本物品的好处是，可
 战斗类：人物（稀有度，等级） | 装备（等级）</p>
 <h2 class="mume-header" id="%E4%BC%A4%E5%AE%B3%E4%B8%8E%E9%98%B2%E5%BE%A1">伤害与防御</h2>
 
-<p><strong>目标</strong><br>
-高级伤害不碾压低级防御<br>
-低级伤害不威胁高级防御</p>
-<p>人物的能力影响装备的发挥，能力过低时，将会发挥失常。无法使用|生僻(70%)|熟练(85%)|驾驭(100%)。<br>
-防御等级 &amp; 攻击等级</p>
+<p>熟练度：人物的能力影响装备的发挥，能力过低时，将会发挥失常。无法使用|生僻(70%)|熟练(85%)|驾驭(100%)。</p>
+<p><strong>基础</strong> 以护甲为基础</p>
+<h3 class="mume-header" id="%E9%98%B2%E5%BE%A1%E7%AD%89%E7%BA%A7-%E6%94%BB%E5%87%BB%E7%AD%89%E7%BA%A7">防御等级 &amp; 攻击等级</h3>
+
 <ul>
 <li>设计初衷：低级的攻击对高级的防御效果降低，高级的攻击对低级的护甲不会碾压</li>
 <li>攻击等级： 防御等级 - 伤害效率、效果成功率</li>
 <li>问题：升级换装速度、随机属性？</li>
-</ul>
-<p><strong>基础</strong></p>
-<ul>
-<li>以护甲为基础</li>
 </ul>
 <h3 class="mume-header" id="%E6%8A%80%E8%83%BD-1">技能</h3>
 
@@ -708,9 +787,6 @@ Build必须是基于基本物品类型的，基于基本物品的好处是，可
 <h3 class="mume-header" id="%E4%BC%A4%E5%AE%B3%E7%B1%BB%E5%9E%8B">伤害类型</h3>
 
 <p>physical/elemental/chaos</p>
-<h3 class="mume-header" id="%E5%BD%B1%E5%93%8D%E5%9B%A0%E7%B4%A0">影响因素</h3>
-
-<p>攻防等级</p>
 <h2 class="mume-header" id="%E7%BB%8F%E6%B5%8E">经济</h2>
 
 <h3 class="mume-header" id="%E9%80%9A%E8%B4%A7%E8%86%A8%E8%83%80">通货膨胀</h3>
@@ -722,6 +798,13 @@ Build必须是基于基本物品类型的，基于基本物品的好处是，可
 <li>通货</li>
 </ul>
 <p>绑定</p>
+<h1 class="mume-header" id="testing-text">Testing Text</h1>
+
+<h2 class="mume-header" id="core">CORE</h2>
+
+<p><em><strong>&quot;Recruting adventurers, leveling and grinding gears in dugeons&quot;</strong></em><br>
+Keywords: <strong>Turn-base</strong>, <strong>Diablo-like</strong><br>
+Inspiration From: Diablo 2, Darkest Dungeons, Path of Exile</p>
 
       </div>
       
